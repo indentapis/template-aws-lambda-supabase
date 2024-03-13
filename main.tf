@@ -10,8 +10,8 @@ terraform {
 
 # Indent + Supabase Integration
 
-# Details: https://github.com/indentapis/integrations/tree/c8a55bd96a26a7dca15688defd2db8c41d3cc425/packages/beta/indent-integration-supabase
-# Last Change: https://github.com/indentapis/integrations/commit/c8a55bd96a26a7dca15688defd2db8c41d3cc425
+# Details: https://github.com/indentapis/integrations/tree/c31c0a2f5371078d198ff8ae1a847404c628620e/packages/beta/indent-integration-supabase
+# Last Change: https://github.com/indentapis/integrations/commit/c31c0a2f5371078d198ff8ae1a847404c628620e
 
 module "idt-supabase-webhook" {
   source                = "git::https://github.com/indentapis/integrations//terraform/modules/indent_runtime_aws_lambda"
@@ -19,8 +19,8 @@ module "idt-supabase-webhook" {
   indent_webhook_secret = var.indent_webhook_secret
   artifact = {
     bucket       = "indent-artifacts-us-west-2"
-    function_key = "webhooks/aws/lambda/supabase-c8a55bd96a26a7dca15688defd2db8c41d3cc425-function.zip"
-    deps_key     = "webhooks/aws/lambda/supabase-c8a55bd96a26a7dca15688defd2db8c41d3cc425-deps.zip"
+    function_key = "webhooks/aws/lambda/supabase-c31c0a2f5371078d198ff8ae1a847404c628620e-function.zip"
+    deps_key     = "webhooks/aws/lambda/supabase-c31c0a2f5371078d198ff8ae1a847404c628620e-deps.zip"
   }
   env = {
     SUPABASE_TOKEN  = var.supabase_token
